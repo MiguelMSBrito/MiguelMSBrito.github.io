@@ -46,7 +46,7 @@ h1 { font-size: clamp(36px, 7vw, 60px); line-height: 1.05; margin: 0 0 12px; fon
 .btn {
   display: inline-flex; align-items: center; justify-content: center; min-height: 44px;
   padding: 10px 18px; border-radius: 8px; border: 1px solid var(--line);
-  color: var(--ink); text-decoration: none; font-weight: 600; background: var(--bg2);
+  color: var(--ink); text-decoration: none; font-weight: 600; background: var(--bg2); white-space: nowrap;
 }
 .btn.primary { background: var(--accent); color: var(--on-accent); border-color: var(--accent); }
 .btn:hover { border-color: var(--accent); }
@@ -140,3 +140,13 @@ footer { padding-top: 30px; padding-bottom: calc(40px + env(safe-area-inset-bott
   .hero-photo img { aspect-ratio: 3 / 2; object-position: 65% 35%; }
   .hero-photo figcaption { padding: 10px 14px; font-size: 14px; }
 }
+
+/* language switch */
+footer { display: flex; justify-content: space-between; align-items: center; gap: 16px; flex-wrap: wrap; }
+footer .small { margin: 0; }
+.langs { display: inline-flex; border: 1px solid var(--line); border-radius: 8px; overflow: hidden; }
+.langs a { display: inline-flex; align-items: center; justify-content: center; min-width: 48px; min-height: 40px;
+  padding: 0 12px; font: 500 14px/1 "JetBrains Mono", monospace; color: var(--mute); text-decoration: none; }
+.langs a + a { border-left: 1px solid var(--line); }
+.langs a[aria-current="page"] { background: var(--bg2); color: var(--accent); }
+@media (hover: hover) { .langs a:hover { color: var(--ink); } }
