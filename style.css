@@ -147,3 +147,11 @@ footer .sep { margin: 0 8px; color: var(--line); }
   .gallery { grid-template-columns: repeat(2, 1fr); }
   .fit, .pillars { grid-template-columns: 1fr; }
 }
+
+/* contact */
+.contact { display: flex; gap: 28px; align-items: center; justify-content: space-between; flex-wrap: wrap; }
+.contact p { color: var(--mute); margin: 0 0 8px; }
+.qrbox { margin: 0; text-align: center; }
+.qrbox img { background: #fff; padding: 8px; border-radius: 10px; width: 140px; height: 140px; }
+.qrbox figcaption { font: 500 12px/1.4 "JetBrains Mono", monospace; color: var(--mute); margin-top: 6px; }
+.hero .lead { margin-bottom: 20px; }
