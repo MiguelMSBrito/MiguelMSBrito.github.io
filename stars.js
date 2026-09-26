@@ -60,7 +60,6 @@
 
   readColor(); resize();
   window.addEventListener('resize', resize);
-  matchMedia('(prefers-color-scheme: light)').addEventListener('change', () => { readColor(); if (still) draw(0, 0); });
   if (still) return;
   document.addEventListener('visibilitychange', () => {
     if (document.hidden) { cancelAnimationFrame(raf); last = 0; }

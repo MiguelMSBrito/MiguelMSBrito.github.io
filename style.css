@@ -1,21 +1,15 @@
 :root {
-  --bg: #070b16;
-  --bg2: #0d1426;
-  --card: rgba(17, 26, 48, .88);
-  --line: #22304f;
-  --ink: #e7ecf5;
-  --mute: #9aa8c2;
+  color-scheme: dark;
+  --bg: #000000;
+  --bg2: #111111;
+  --card: rgba(16, 16, 16, .92);
+  --line: #2a2a2a;
+  --ink: #f2f2f2;
+  --mute: #a6a6a6;
   --accent: #7cc4ff;
   --accent2: #ffb86b;
-  --star: 231, 240, 255;
-  --on-accent: #06101f;
-}
-@media (prefers-color-scheme: light) {
-  :root:not([data-theme="dark"]) {
-    --bg: #f5f7fb; --bg2: #e9eef7; --card: rgba(255, 255, 255, .9); --line: #d6deeb;
-    --ink: #142033; --mute: #56637a; --accent: #1f5fa8; --accent2: #b3620a;
-    --star: 60, 90, 140; --on-accent: #ffffff;
-  }
+  --star: 255, 255, 255;
+  --on-accent: #000000;
 }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; -webkit-text-size-adjust: 100%; }
@@ -31,7 +25,7 @@ a { color: var(--accent); overflow-wrap: anywhere; }
 #stars { position: fixed; inset: 0; width: 100%; height: 100%; z-index: -1; pointer-events: none; }
 
 /* hero */
-.hero { padding: 64px 0 40px; background: radial-gradient(900px 400px at 20% 0%, rgba(124,196,255,.14), transparent 70%); }
+.hero { padding: 64px 0 40px;  }
 .hero-grid { display: grid; grid-template-columns: 220px 1fr; gap: 40px; align-items: center; }
 .orbit { position: relative; width: 220px; height: 220px; }
 .orbit::before {
@@ -65,7 +59,7 @@ h2::before { content: ""; display: inline-block; width: 10px; height: 10px; back
 
 /* timeline */
 .tl { list-style: none; padding: 0; margin: 28px 0 0; position: relative; }
-.tl::before { content: ""; position: absolute; left: 110px; top: 6px; bottom: 6px; width: 2px; background: linear-gradient(var(--accent), var(--line)); }
+.tl::before { content: ""; position: absolute; left: 110px; top: 6px; bottom: 6px; width: 2px; background: linear-gradient(var(--accent), #333); }
 .ev { display: grid; grid-template-columns: 110px 1fr; gap: 28px; margin-bottom: 26px; position: relative; }
 .ev::before {
   content: ""; position: absolute; left: 104px; top: 8px; width: 14px; height: 14px;
@@ -94,7 +88,7 @@ h2::before { content: ""; display: inline-block; width: 10px; height: 10px; back
 .g img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
 @media (hover: hover) { .g:hover img { transform: scale(1.04); } }
 dialog { border: 0; padding: 0; background: transparent; max-width: 94vw; max-height: 92vh; overflow: visible; }
-dialog::backdrop { background: rgba(3,6,14,.88); }
+dialog::backdrop { background: rgba(0,0,0,.92); }
 dialog img { max-width: 94vw; max-height: 86vh; border-radius: 10px; }
 .close {
   position: absolute; top: -48px; right: 0; width: 44px; height: 44px; font-size: 30px; line-height: 1;
@@ -138,7 +132,7 @@ footer { padding-top: 30px; padding-bottom: calc(40px + env(safe-area-inset-bott
 
 /* featured photo */
 .feature { padding-top: 8px; padding-bottom: 20px; }
-.hero-photo { margin: 0; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); background: var(--card); box-shadow: 0 20px 60px rgba(0,0,0,.35); }
+.hero-photo { margin: 0; border-radius: 16px; overflow: hidden; border: 1px solid var(--line); background: var(--card); box-shadow: 0 20px 60px rgba(0,0,0,.6); }
 .hero-photo img { width: 100%; height: auto; aspect-ratio: 16 / 9; object-fit: cover; object-position: 60% 45%; }
 .hero-photo figcaption { padding: 12px 18px; color: var(--mute); font-size: 15px; }
 @media (max-width: 760px) {
