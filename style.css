@@ -89,8 +89,9 @@ h2::before { content: ""; display: inline-block; width: 10px; height: 10px; back
 
 .gallery { display: grid; grid-template-columns: repeat(4, 1fr); gap: 8px; margin: 10px 0 14px; }
 .g { padding: 0; border: 0; background: none; cursor: zoom-in; border-radius: 10px; overflow: hidden; aspect-ratio: 1; -webkit-tap-highlight-color: transparent; }
-.g.big { grid-column: span 2; grid-row: span 2; aspect-ratio: auto; }
+.g.big { grid-column: span 2; grid-row: span 2; }
 .g img { width: 100%; height: 100%; object-fit: cover; transition: transform .3s; }
+.g img[src$="robot.jpg"] { object-position: 22% 50%; }
 @media (hover: hover) { .g:hover img { transform: scale(1.04); } }
 dialog { border: 0; padding: 0; background: transparent; max-width: 94vw; max-height: 92vh; overflow: visible; }
 dialog::backdrop { background: rgba(0,0,0,.92); }
