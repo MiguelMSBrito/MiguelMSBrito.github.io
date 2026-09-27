@@ -14,4 +14,11 @@
   }
   if (chosen !== current) location.replace(chosen === 'pt' ? '/pt/' : '/');
   else if (params.has('lang')) history.replaceState(null, '', location.pathname + location.hash);
+
+  // Use the Portuguese CV PDF supplied in the repository for the CV download links.
+  document.addEventListener('DOMContentLoaded', function () {
+    document.querySelectorAll('a[href$="Miguel_Brito_CV.pdf"]').forEach(function (link) {
+      link.href = 'Miguel_Brito_CV_PT.pdf';
+    });
+  });
 })();
